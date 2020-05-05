@@ -16,7 +16,10 @@ class Chromosome(val maxWeight: Double) : Comparable<Chromosome> {
         return true
     }
 
-    fun addGenes(genes: List<Gene>) { genes.stream().map { g -> addGene(g) } }
+    fun addGenes(genes: List<Gene>) {
+        for (g in genes)
+            addGene(g)
+    }
 
     fun getSize(): Int { return genes.size }
 
