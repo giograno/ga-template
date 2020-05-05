@@ -25,12 +25,11 @@ class GeneticAlgorithm(items: List<Gene>,
         }
     }
 
-    public fun evolve(): Chromosome {
+    fun evolve(): Chromosome {
 
         for (i in 1..budget) {
             breedNextGeneration()
-//            population = population.sortedBy { it.totalValue } as MutableList<Chromosome>
-            population.sort()
+            population.sort() // take the bests individuals based on the fitness function
             population = population.subList(0, populationSize)
         }
         return population[0]
