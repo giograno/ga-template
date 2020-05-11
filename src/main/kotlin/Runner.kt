@@ -23,7 +23,7 @@ fun main() {
     items.add((Gene("hammer", 2.3, 20.0)))
     items.add((Gene("book", 0.5, 30.0)))
 
-    val ga = GeneticAlgorithm(items = items, populationSize = 10, budget = 50, maxWeight = 5.0)
+    val ga = GeneticAlgorithm(items = items, populationSize = 10, budget = 30, maxWeight = 5.0)
     val best: Chromosome = ga.evolve()
     print(best)
 }
